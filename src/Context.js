@@ -7,9 +7,24 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
 	state = {
-		products:storeProducts,
+		products:[],
 		detailProduct:detailProduct
+	};
+	componentDidMount() {
+		this.setProducts();
 	}
+
+	setProducts = () => {
+		let tempProducts =[];
+		storeProducts.forEach(item => {
+			const singleItme = {...item};
+			tempProducts = [...tempProducts, singleItme];
+		});
+		this.setState(()=>{
+			return {products:tempProducts};
+		});
+	};
+
 	hadleDetail = () =>{
 		console.log('Hello from Detail');
 	}

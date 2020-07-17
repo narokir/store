@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import {Link} from 'react-router-dom';
 import { ProductConsumer } from '../Context';
+import PropTypes from 'prop-types';
+
 
 
 export default class Product extends Component {
@@ -32,6 +34,17 @@ export default class Product extends Component {
 			</ProductWrapper>
 		)
 	}
+}
+
+// Define prop types to check for errors in data
+Product.propTypes = {
+	product:PropTypes.shape({
+		id:PropTypes.number,
+		img:PropTypes.string,
+		title:PropTypes.string,
+		price:PropTypes.number,
+		inCart:PropTypes.bool
+	}).isRequired
 }
 
 const ProductWrapper = styled.div`
