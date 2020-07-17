@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import Product from'./Product';
-import Title from './Title';
-import { ProductConsumer} from '../Context';
+import React, { Component } from "react";
+import Product from "./Product";
+import Title from "./Title";
+import { ProductConsumer } from "../Context";
 
 export default class ProductList extends Component {
 	render() {
@@ -9,17 +9,16 @@ export default class ProductList extends Component {
 			<React.Fragment>
 				<div className="py-5">
 					<div className="container">
-					{ // products row 
-
-					}
-					<Title name="our" title="products">
-					</Title>
+						{
+							// products row
+						}
+						<Title name="our" title="products"></Title>
 						<div className="row">
 							<ProductConsumer>
-								{value => {
-									return value.products.map( product => {
-										return <Product product = {product} key={product.id} />;
-									})
+								{(value) => {
+									return value.products.map((product) => {
+										return <Product product={product} key={product.id} />;
+									});
 								}}
 							</ProductConsumer>
 						</div>
