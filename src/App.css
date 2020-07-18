@@ -1,21 +1,41 @@
-:root{
-  --mainGreen:#009666;
-  --lightGreen:#9fc;
-  --mainBlue:#06f;
-  --lightBlue:#09f;
-  --mainWhite:white;
-  --mainDark:#663;
-  --mainYellow:#fc0;
+:root {
+  --mainGreen: #009666;
+  --lightGreen: #9fc;
+  --mainBlue: #06f;
+  --lightBlue: #09f;
+  --mainWhite: white;
+  --mainDark: #663;
+  --mainYellow: #fc0;
 }
-body{
-  font-family: 'PT Sans Narrow', sans-serif !important;
+body {
+  font-family: "PT Sans Narrow", sans-serif !important;
   background: var(--mainWhite) !important;
   color: var(--mainDark) !important;
 }
-.title-text{
-  font-family: 'Anton', sans-serif !important;
+.title-text {
+  font-family: "Anton", sans-serif !important;
   text-transform: uppercase;
 }
-.text-blue{
+.text-blue {
   color: var(--mainBlue) !important;
+}
+.text-bright {
+  color: var(--lightBlue);
+}
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.4rem !important;
+  color: var(--mainDark);
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainDark) !important;
+}
+.btn-balck:hover {
+  background: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
+}
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainYellow);
 }
