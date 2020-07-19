@@ -24,16 +24,22 @@ export default class Modal extends Component {
 											className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize p-5"
 										>
 											<h5>Item Added To cart</h5>
-											<img src={img} className="img-fluid p-3" alt="product" />
+											<img
+												src={img}
+												className="img-fluid p-3"
+												alt="product"
+											/>
 											<h5>{title}</h5>
-											<h5 className="text-muted">price: $ {price}</h5>
+											<h5 className="text-muted">
+												price: $ {price}
+											</h5>
 											<Link to="/">
 												<ButtonContainer
 													onClick={() => {
 														closeModal();
 													}}
 												>
-													Store
+													back to Store
 												</ButtonContainer>
 											</Link>
 											<Link to="/cart">
@@ -43,7 +49,7 @@ export default class Modal extends Component {
 														closeModal();
 													}}
 												>
-													My Cart
+													View Cart
 												</ButtonContainer>
 											</Link>
 										</div>
